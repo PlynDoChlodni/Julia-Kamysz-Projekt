@@ -88,3 +88,25 @@ function getAge() {
 function changeText(value) {
     document.getElementById('result_p').innerHTML = value;
 }
+
+
+    var countDownDate = new Date("Sep 14, 2021 9:00:00").getTime();
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+    
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("countdown_p").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown_p").innerHTML = "Edycja już się zaczęła - ruszaj robić zadania!";
+      }
+    }, 1000);
