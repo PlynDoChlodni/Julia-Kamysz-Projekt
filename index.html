@@ -1,0 +1,36 @@
+<DOCTYPE! html>
+<html  lang=pl>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="JavaScript.js"></script> 
+    <title>Projekt</title>
+</head>
+<body>
+    <div id="Header">
+    <h1>Projekt!</h1>
+    
+    <a href="https://pixblocks.com/" target="_blank"><img src="PixBlock_logo.png"></img></a>
+    </div>
+    <h2> Sprawdź w której kategorii Pix Programming Challenge możesz startować!</h2>
+    <div id="Form">    
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Mężczyzna</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kobieta</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Coś</label><br>
+        <br>
+        <label for="DOB">Data Urodzenia:</label>
+       <input type="date" id="DOB" name="birthday">
+        <br>
+        <br>
+        <input type="button" onclick="send()" value="Sprawdź"> 
+
+    </div>
+    <div id="result">
+        <p id="result_p"></p>    
+    </div>
+
+</body>
+
+</html>
